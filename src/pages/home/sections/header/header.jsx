@@ -4,6 +4,7 @@ import { MapPin, Clock, ChevronDown, Globe } from "lucide-react";
 import logoBg from "../../../../assets/MaskGroup.png";
 import logo from "../../../../assets/logo.svg.png";
 import logoPoint from "../../../../assets/maskPoint.png";
+
 function Header() {
   const [language, setLanguage] = useState("Language");
 
