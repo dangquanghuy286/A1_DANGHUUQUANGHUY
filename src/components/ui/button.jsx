@@ -1,4 +1,3 @@
-// Button component đơn giản
 const Button = ({ children, variant = "solid", className, ...props }) => {
   const base =
     "flex items-center justify-center rounded-[48px] transition-colors";

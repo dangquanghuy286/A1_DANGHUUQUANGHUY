@@ -1,10 +1,10 @@
 import React from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import Button from "../../../../components/ui/button";
-import background from "../../../../assets/Background.png";
-import logoPoint from "../../../../assets/maskPoint.png";
-import leftPoint from "../../../../assets/left-arrow.svg.png";
-import rightPoint from "../../../../assets/right-arrow.svg.png";
+import Button from "@/components/ui/button";
+import background from "@/assets/Background.png";
+import logoPoint from "@/assets/maskPoint.png";
+import leftPoint from "@/assets/left-arrow.svg.png";
+import rightPoint from "@/assets/right-arrow.svg.png";
 export const MainContentSection = () => {
   const navigationDots = [
     { active: false, className: "bg-white" },
@@ -29,7 +29,7 @@ export const MainContentSection = () => {
         <div className="mr-[920px] ml-[300px] w-full">
           {/* Hero Text Section */}
           <div className="mb-[100px]">
-            <h2 className="font-montez mb-[24px] text-[40px] text-white">
+            <h2 className="font-montez text-[40px] text-white">
               Get unforgettable pleasure with us
             </h2>
             <h1 className="font-manrope max-w-[700px] text-[80px] leading-[88px] font-bold text-white">
