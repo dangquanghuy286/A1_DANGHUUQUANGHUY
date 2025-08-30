@@ -4,6 +4,7 @@ import { MapPin, Clock, ChevronDown, Globe } from "lucide-react";
 import logoBg from "@/assets/MaskGroup.png";
 import logo from "@/assets/logo.svg.png";
 import logoPoint from "@/assets/maskPoint.png";
+import Button from "../../../../components/ui/button";
 
 function Header() {
   const [language, setLanguage] = useState("Language");
@@ -95,7 +96,7 @@ function Header() {
         </div>
 
         {/* Menu */}
-        <nav className="flex h-[92px] w-[867.52px] items-center gap-[36px]">
+        <nav className="ml-2 flex h-[92px] w-[867.52px] items-center gap-[36px]">
           {navigationItems.map((item, idx) => (
             <a
               key={idx}
@@ -109,13 +110,12 @@ function Header() {
         </nav>
 
         {/* CTA */}
-        <button
-          className="flex h-[56px] w-[230px] items-center justify-center gap-x-2 rounded-[48px] bg-[#113D48] text-white transition hover:bg-teal-700"
-          style={{ position: "absolute", left: "1618.61px", top: "66px" }}
-        >
-          <span>Request A Quote</span>
-          <img src={logoPoint} alt="logoPoint" className="h-6 w-6" />
-        </button>
+        <div className="flex flex-1 justify-end pr-[72px]">
+          <Button className="my-[18px] h-[56px] w-[230px] gap-x-2 bg-[#113D48] hover:bg-teal-700">
+            <span>Request A Quote</span>
+            <img src={logoPoint} alt="logoPoint" className="h-6 w-6" />
+          </Button>
+        </div>
       </div>
     </header>
   );
