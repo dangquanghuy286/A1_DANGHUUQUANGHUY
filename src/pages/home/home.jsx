@@ -5,6 +5,7 @@ import SearchFilter from "./sections/maincontentsection/searchFilter";
 
 import { HeroSection } from "./sections/topDestination/topDestination";
 import PopularDestinationsSection from "./sections/popularDestination/PopularDestination";
+import OverlapGroupWrapperSubsection from "./sections/overlapGroupWrapperSubsection/OverlapGroupWrapperSubsection";
 
 const Home = () => {
   return (
@@ -16,10 +17,9 @@ const Home = () => {
           <SearchFilter />
         </div>
       </div>
-      {/* <TopDestination /> */}
       <HeroSection />
-
       <PopularDestinationsSection />
+      <OverlapGroupWrapperSubsection />
     </>
   );
 };
