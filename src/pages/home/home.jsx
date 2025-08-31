@@ -2,8 +2,9 @@ import React from "react";
 import Header from "./sections/header/header";
 import { MainContentSection } from "./sections/maincontentsection/maincontentsection";
 import SearchFilter from "./sections/maincontentsection/searchFilter";
-import { PopularDestinationsSection } from "./sections/popularDestination/PopularDestination";
+
 import { HeroSection } from "./sections/topDestination/topDestination";
+import PopularDestinationsSection from "./sections/popularDestination/PopularDestination";
 
 const Home = () => {
   return (

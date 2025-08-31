@@ -1,19 +1,23 @@
 import React from "react";
-import Button from "../../../../components/ui/button";
-
-export const PopularDestinationsSection = () => {
+import Button from "@/components/ui/button";
+import destination from "@/assets/destination_1_1.jpg.png";
+import destination1 from "@/assets/destination_1_2.jpg.png";
+import destination2 from "@/assets/destination_1_3.jpg.png";
+import destination3 from "@/assets/destination_1_4.jpg.png";
+import destination4 from "@/assets/destination_1_5.jpg.png";
+import imgmaskPoint from "@/assets/maskPoint.png";
+const PopularDestinationsSection = () => {
   const destinations = [
     {
       id: 1,
       name: "Island",
       listings: "22 Listing",
-      image:
-        "https://c.animaapp.com/met4ud2uDv3jx9/img/destination-1-4-jpg-1.png",
+      image: destination,
       size: "medium",
       position: "left-[147px]",
       blur: "blur-[2px]",
       gradient:
-        "bg-[linear-gradient(270deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0)_100%)]",
+        "bg-[linear-gradient(270deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.7)_50%)]",
       width: "w-[315px]",
       height: "h-[463px]",
       top: "top-[86px]",
@@ -22,13 +26,12 @@ export const PopularDestinationsSection = () => {
       id: 2,
       name: "Nepal",
       listings: "22 Listing",
-      image:
-        "https://c.animaapp.com/met4ud2uDv3jx9/img/destination-1-5-jpg.png",
+      image: destination1,
       size: "large",
       position: "left-[341px]",
       blur: "blur-[2px]",
       gradient:
-        "bg-[linear-gradient(270deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0)_100%)]",
+        "bg-[linear-gradient(270deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.5)_100%)]",
       width: "w-[364px]",
       height: "h-[536px]",
       top: "top-[50px]",
@@ -37,10 +40,9 @@ export const PopularDestinationsSection = () => {
       id: 3,
       name: "Thailand",
       listings: "22 Listing",
-      image:
-        "https://c.animaapp.com/met4ud2uDv3jx9/img/destination-1-1-jpg.png",
+      image: destination2,
       size: "xlarge",
-      position: "left-[607px]", // Trung tâm layout 1344px
+      position: "left-[607px]",
       blur: "",
       gradient: "",
       width: "w-[432px]",
@@ -51,13 +53,12 @@ export const PopularDestinationsSection = () => {
       id: 4,
       name: "Maldives",
       listings: "22 Listing",
-      image:
-        "https://c.animaapp.com/met4ud2uDv3jx9/img/destination-1-2-jpg.png",
+      image: destination3,
       size: "large",
       position: "left-[941px]",
       blur: "blur-[2px]",
       gradient:
-        "bg-[linear-gradient(90deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0)_100%)]",
+        "bg-[linear-gradient(90deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.5)_100%)]",
       width: "w-[364px]",
       height: "h-[536px]",
       top: "top-[50px]",
@@ -66,13 +67,12 @@ export const PopularDestinationsSection = () => {
       id: 5,
       name: "Belgium",
       listings: "22 Listing",
-      image:
-        "https://c.animaapp.com/met4ud2uDv3jx9/img/destination-1-3-jpg-1.png",
+      image: destination4,
       size: "medium",
       position: "left-[1184px]",
       blur: "blur-[2px]",
       gradient:
-        "bg-[linear-gradient(90deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0)_100%)]",
+        "bg-[linear-gradient(90deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.7)_100%)]",
       width: "w-[315px]",
       height: "h-[463px]",
       top: "top-[86px]",
@@ -89,11 +89,18 @@ export const PopularDestinationsSection = () => {
           Popular Destination
         </div>
       </div>
+
       <div className="relative left-[-151px] mx-auto mt-[48.69px] h-[636px] w-[1344px]">
         {destinations.map((destination) => (
           <div
             key={destination.id}
-            className={`absolute ${destination.width} ${destination.height} ${destination.top} ${destination.position} overflow-hidden rounded-3xl ${destination.blur}`}
+            className={`absolute ${destination.width} ${destination.height} ${destination.top} ${destination.position} overflow-hidden rounded-3xl transition-all duration-500 ${
+              destination.size === "xlarge"
+                ? "z-20 opacity-100"
+                : destination.id === 5
+                  ? "z-0"
+                  : "z-10"
+            }`}
           >
             <div className="relative h-full w-full p-0">
               <div className="relative h-full w-full">
@@ -108,19 +115,20 @@ export const PopularDestinationsSection = () => {
                       className={`absolute inset-0 ${destination.gradient}`}
                     />
                   )}
+
                   {destination.size === "xlarge" && (
-                    <div className="absolute bottom-4 left-0 h-[52px] w-[423px]">
-                      <div className="absolute top-[-2px] left-10 h-[33px] w-[98px]">
-                        <h3 className="font-manrope absolute top-0 left-0 h-[33px] w-[99px] text-2xl leading-[34.0px] font-semibold tracking-[0] whitespace-nowrap text-white">
+                    <div className="absolute bottom-10 left-0 h-[51px] w-[423px]">
+                      <div className="absolute left-10">
+                        <h3 className="font-manrope absolute top-0 left-0 text-2xl leading-[34.0px] tracking-[0] whitespace-nowrap text-white">
                           {destination.name}
                         </h3>
                       </div>
-                      <p className="absolute top-6 left-10 h-5 w-[74px] text-base leading-[26px] font-normal tracking-[0] whitespace-nowrap text-white">
+                      <p className="absolute top-6 left-10 mt-2 text-base leading-[26px] font-normal tracking-[0] whitespace-nowrap text-white">
                         {destination.listings}
                       </p>
                       <Button
                         variant="outline"
-                        className="absolute top-0 right-0 h-[51px] w-[154px] rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
+                        className="absolute top-0 right-[44px] h-[51px] w-[154px] rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
                       >
                         <span className="text-center text-base leading-[26px] font-normal tracking-[0] text-white">
                           View All
@@ -128,57 +136,59 @@ export const PopularDestinationsSection = () => {
                         <img
                           className="ml-2 h-4 w-4"
                           alt="Arrow"
-                          src="https://c.animaapp.com/met4ud2uDv3jx9/img/mask-group-19.svg"
+                          src={imgmaskPoint}
                         />
                       </Button>
                     </div>
                   )}
+
                   {destination.size === "large" && (
-                    <div className="absolute bottom-4 left-0 h-11 w-[357px]">
-                      <div className="absolute top-[-1.5px] left-10 h-7 w-[85px]">
-                        <h3 className="absolute top-0 left-0 h-7 w-[101px] [font-family:'Manrope',Helvetica] text-2xl leading-[34.0px] font-semibold tracking-[0] whitespace-nowrap text-white">
+                    <div className="absolute bottom-10 left-0 h-11 w-[357px]">
+                      <div className="absolute top-[-1.5px] left-10">
+                        <h3 className="font-manrope absolute top-0 left-0 text-2xl leading-[34.0px] tracking-[0] whitespace-nowrap text-white">
                           {destination.name}
                         </h3>
                       </div>
-                      <p className="absolute top-6 left-10 h-[17px] w-[74px] [font-family:'Inter',Helvetica] text-base leading-[26px] font-normal tracking-[0] whitespace-nowrap text-white">
+                      <p className="absolute top-6 left-10 mt-2 text-base leading-[26px] font-normal tracking-[0] whitespace-nowrap text-white">
                         {destination.listings}
                       </p>
                       <Button
                         variant="outline"
-                        className="absolute top-0 right-0 h-[43px] w-[130px] rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
+                        className="absolute top-0 right-[44px] h-[43px] w-[130px] rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
                       >
-                        <span className="text-center [font-family:'Inter',Helvetica] text-base leading-[26px] font-normal tracking-[0] text-white">
+                        <span className="text-center text-base leading-[26px] tracking-[0] text-white">
                           View All
                         </span>
                         <img
                           className="ml-2 h-[13px] w-[13px]"
                           alt="Arrow"
-                          src="https://c.animaapp.com/met4ud2uDv3jx9/img/mask-group-12.svg"
+                          src={imgmaskPoint}
                         />
                       </Button>
                     </div>
                   )}
+
                   {destination.size === "medium" && (
-                    <div className="absolute bottom-4 left-0 h-[38px] w-[308px]">
-                      <div className="absolute top-[-1.5px] left-8 h-6 w-[67px]">
-                        <h3 className="absolute top-0 left-0 h-6 w-[68px] [font-family:'Manrope',Helvetica] text-2xl leading-[34.0px] font-semibold tracking-[0] whitespace-nowrap text-white">
+                    <div className="absolute bottom-10 left-0 h-[38px] w-[308px]">
+                      <div className="absolute top-[-1.5px] left-8">
+                        <h3 className="font-manrope absolute top-0 left-0 text-2xl leading-[34.0px] tracking-[0] whitespace-nowrap text-white">
                           {destination.name}
                         </h3>
                       </div>
-                      <p className="absolute top-5 left-8 h-[15px] w-[54px] [font-family:'Inter',Helvetica] text-base leading-[26px] font-normal tracking-[0] whitespace-nowrap text-white">
+                      <p className="absolute top-5 left-8 mt-2 text-base leading-[26px] font-normal tracking-[0] whitespace-nowrap text-white">
                         {destination.listings}
                       </p>
                       <Button
                         variant="outline"
-                        className="absolute top-0 right-0 h-[37px] w-28 rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
+                        className="absolute top-0 right-[44px] h-[37px] w-28 rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
                       >
-                        <span className="text-center [font-family:'Inter',Helvetica] text-base leading-[26px] font-normal tracking-[0] text-white">
+                        <span className="text-center text-base leading-[26px] font-normal tracking-[0] text-white">
                           View All
                         </span>
                         <img
                           className="ml-2 h-3 w-3"
                           alt="Arrow"
-                          src="https://c.animaapp.com/met4ud2uDv3jx9/img/mask-group-13.svg"
+                          src={imgmaskPoint}
                         />
                       </Button>
                     </div>
@@ -192,3 +202,4 @@ export const PopularDestinationsSection = () => {
     </section>
   );
 };
+export default PopularDestinationsSection;
