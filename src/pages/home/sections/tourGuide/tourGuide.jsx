@@ -1,23 +1,26 @@
 import React from "react";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
-
+import teamMember1 from "@/assets/team_1_2.jpg.png";
+import teamMember2 from "@/assets/team_1_3.jpg.png";
+import teamMember3 from "@/assets/team_1_4.jpg.png";
+import teamMember4 from "@/assets/team_1_1.jpg.png";
 const TourGuidesSection = () => {
   const tourGuides = [
     {
       name: "Jane Cooper",
-      image: "https://c.animaapp.com/mexa0dzzVr4grv/img/team-1-2-jpg.png",
+      image: teamMember1,
     },
     {
       name: "Guy Hawkins",
-      image: "https://c.animaapp.com/mexa0dzzVr4grv/img/team-1-3-jpg.png",
+      image: teamMember2,
     },
     {
       name: "Jenny Wilson",
-      image: "https://c.animaapp.com/mexa0dzzVr4grv/img/team-1-4-jpg.png",
+      image: teamMember3,
     },
     {
       name: "Jacob Jones",
-      image: "https://c.animaapp.com/mexa0dzzVr4grv/img/team-1-1-jpg.png",
+      image: teamMember4,
     },
   ];
 
@@ -30,7 +33,7 @@ const TourGuidesSection = () => {
       className="relative w-full bg-[#e9f6f9] bg-[url('https://c.animaapp.com/mexa0dzzVr4grv/img/background-2.png')] bg-center"
       style={{ height: "854.02px" }}
     >
-      <div className="container mx-auto px-4" style={{ maxWidth: "1920px" }}>
+      <div className="container mx-auto" style={{ maxWidth: "1920px" }}>
         {/* Header */}
         <header className="text-center" style={{ paddingTop: "120px" }}>
           <div className="font-montez text-[40px] font-normal text-[#113d48]">
@@ -105,7 +108,7 @@ const TourGuidesSection = () => {
             </div>
 
             {/* Navigation Dots */}
-            <div className="flex justify-center gap-[10px]">
+            <div className="flex justify-center gap-[30px]">
               {navigationDots.map((dot, index) => (
                 <button
                   key={index}

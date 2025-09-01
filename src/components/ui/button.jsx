@@ -4,7 +4,7 @@ const Button = ({ children, variant = "solid", className, ...props }) => {
   const styles =
     variant === "solid"
       ? "bg-[#1ca8cb] text-white hover:bg-[#1ca8cb]/90"
-      : "border border-white bg-transparent text-white hover:bg-white/10";
+      : "border bg-transparent t hover:bg-white/10";
 
   return (
     <button className={`${base} ${styles} ${className}`} {...props}>
