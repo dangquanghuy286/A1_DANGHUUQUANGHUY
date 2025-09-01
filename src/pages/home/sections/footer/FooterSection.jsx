@@ -189,7 +189,7 @@ const FooterSection = () => {
               <h3 className="font-manrope mb-8 text-2xl leading-6 font-semibold text-[#113d48]">
                 Instagram Post
               </h3>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-3 gap-2">
                 {instagramPosts.map((post, index) => (
                   <img
                     key={index}

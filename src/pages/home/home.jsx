@@ -10,6 +10,7 @@ import TourGuidesSection from "./sections/tourGuide/tourGuide";
 import ClientTestimonialsSection from "./sections/clientSay/ClientTestimonialsSection";
 import TourGuidesComment from "./sections/clientSay/clientComment";
 import FooterSection from "./sections/footer/FooterSection";
+import BackToTop from "../../components/ui/BackToTop";
 
 const Home = () => {
   return (
@@ -24,10 +25,12 @@ const Home = () => {
       <HeroSection />
       <PopularDestinationsSection />
       <OverlapGroupWrapperSubsection />
+
       <TourGuidesSection />
       <TourGuidesComment />
       <ClientTestimonialsSection />
       <FooterSection />
+      <BackToTop />
     </>
   );
 };
