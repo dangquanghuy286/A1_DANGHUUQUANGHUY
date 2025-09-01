@@ -9,6 +9,7 @@ import OverlapGroupWrapperSubsection from "./sections/overlapGroupWrapperSubsect
 import TourGuidesSection from "./sections/tourGuide/tourGuide";
 import ClientTestimonialsSection from "./sections/clientSay/ClientTestimonialsSection";
 import TourGuidesComment from "./sections/clientSay/clientComment";
+import FooterSection from "./sections/footer/FooterSection";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <TourGuidesSection />
       <TourGuidesComment />
       <ClientTestimonialsSection />
+      <FooterSection />
     </>
   );
 };
