@@ -81,7 +81,7 @@ const ClientTestimonialsSection = () => {
       <div className="absolute top-[166px] left-[1402px]">
         <Button
           variant="outline"
-          className="h-14 w-[218px] rounded-[48px] border-[#113d48] text-[#113d48] transition-colors hover:bg-[#113d48] hover:text-white"
+          className="h-14 w-[218px] rounded-[48px] border-[#113d48] text-[#113d48] transition-colors hover:bg-[#113d48]"
         >
           <span className="[font-family:'Inter',Helvetica] text-base font-normal">
             See More Articles
@@ -126,7 +126,7 @@ const ClientTestimonialsSection = () => {
                 {/* Read More button */}
                 <Button
                   variant="outline"
-                  className="h-12 w-[158px] rounded-[48px] border-[#113D48] text-[#113D48] transition-colors hover:bg-[#113D48] hover:text-white"
+                  className="h-12 w-[158px] rounded-[48px] border-[#113D48] text-[#113D48] transition-colors hover:bg-[#113D48]"
                 >
                   <span className="[font-family:'Inter',Helvetica] text-base font-normal">
                     Read More

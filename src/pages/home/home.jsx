@@ -8,6 +8,7 @@ import PopularDestinationsSection from "./sections/popularDestination/PopularDes
 import OverlapGroupWrapperSubsection from "./sections/overlapGroupWrapperSubsection/OverlapGroupWrapperSubsection";
 import TourGuidesSection from "./sections/tourGuide/tourGuide";
 import ClientTestimonialsSection from "./sections/clientSay/ClientTestimonialsSection";
+import TourGuidesComment from "./sections/clientSay/clientComment";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <PopularDestinationsSection />
       <OverlapGroupWrapperSubsection />
       <TourGuidesSection />
+      <TourGuidesComment />
       <ClientTestimonialsSection />
     </>
   );
