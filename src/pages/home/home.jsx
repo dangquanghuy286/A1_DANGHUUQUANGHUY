@@ -3,14 +3,16 @@ import Header from "./sections/header/header";
 import { MainContentSection } from "./sections/maincontentsection/maincontentsection";
 import SearchFilter from "./sections/maincontentsection/searchFilter";
 
-import { HeroSection } from "./sections/topDestination/topDestination";
 import PopularDestinationsSection from "./sections/popularDestination/PopularDestination";
 import OverlapGroupWrapperSubsection from "./sections/overlapGroupWrapperSubsection/OverlapGroupWrapperSubsection";
 import TourGuidesSection from "./sections/tourGuide/tourGuide";
 import ClientTestimonialsSection from "./sections/clientSay/ClientTestimonialsSection";
 import TourGuidesComment from "./sections/clientSay/clientComment";
 import FooterSection from "./sections/footer/FooterSection";
-import BackToTop from "../../components/ui/BackToTop";
+import HeroSection from "./sections/topDestination/topDestination";
+import BackToTop from "@/components/ui/BackToTop";
+import Background from "./sections/background/Background";
+import PlanTrip from "./sections/planTrip/PlanTrip";
 
 const Home = () => {
   return (
@@ -24,11 +26,14 @@ const Home = () => {
       </div>
       <HeroSection />
       <PopularDestinationsSection />
+      <PlanTrip />
       <OverlapGroupWrapperSubsection />
 
       <TourGuidesSection />
       <TourGuidesComment />
+      <Background />
       <ClientTestimonialsSection />
+
       <FooterSection />
       <BackToTop />
     </>

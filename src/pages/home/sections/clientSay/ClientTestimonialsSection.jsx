@@ -83,9 +83,7 @@ const ClientTestimonialsSection = () => {
           variant="outline"
           className="h-14 w-[218px] rounded-[48px] border-[#113d48] text-[#113d48] transition-colors hover:bg-[#113d48]"
         >
-          <span className="[font-family:'Inter',Helvetica] text-base font-normal">
-            See More Articles
-          </span>
+          <span className="text-base font-normal">See More Articles</span>
           <img className="ml-2 h-6 w-6" alt="Arrow right" src={rightPoint} />
         </Button>
       </div>
@@ -108,12 +106,12 @@ const ClientTestimonialsSection = () => {
                 {/* Date and read time */}
                 <div className="mb-6 flex items-center gap-4">
                   <div className="flex items-center">
-                    <span className="[font-family:'Inter',Helvetica] text-sm leading-6 font-normal tracking-[0] text-[#6e7070]">
+                    <span className="text-sm leading-6 font-normal tracking-[0] text-[#6e7070]">
                       {post.date}
                     </span>
                     <div className="ml-4 h-2.5 w-px bg-[#999999]" />
                   </div>
-                  <span className="[font-family:'Inter',Helvetica] text-sm leading-6 font-normal tracking-[0] text-[#6e7070]">
+                  <span className="text-sm leading-6 font-normal tracking-[0] text-[#6e7070]">
                     {post.readTime}
                   </span>
                 </div>
@@ -128,9 +126,7 @@ const ClientTestimonialsSection = () => {
                   variant="outline"
                   className="h-12 w-[158px] rounded-[48px] border-[#113D48] text-[#113D48] transition-colors hover:bg-[#113D48]"
                 >
-                  <span className="[font-family:'Inter',Helvetica] text-base font-normal">
-                    Read More
-                  </span>
+                  <span className="text-base font-normal">Read More</span>
                   <img
                     className="ml-2 h-4 w-4"
                     alt="Arrow right"

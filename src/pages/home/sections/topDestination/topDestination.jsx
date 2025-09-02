@@ -6,7 +6,7 @@ import imgCategories2 from "@/assets/categories2.png";
 import imgCategories3 from "@/assets/categories3.png";
 import imgCategories4 from "@/assets/categories4.png";
 
-export const HeroSection = () => {
+const HeroSection = () => {
   const tourCategories = [
     {
       title: "Wildlife",
@@ -117,3 +117,4 @@ export const HeroSection = () => {
     </section>
   );
 };
+export default HeroSection;

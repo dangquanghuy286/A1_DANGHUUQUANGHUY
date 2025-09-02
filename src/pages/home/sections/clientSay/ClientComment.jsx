@@ -76,7 +76,7 @@ const TourGuidesComment = () => {
           </h2>
         </header>
 
-        <div className="absolute top-[150px] left-0 h-[578px] w-full overflow-hidden">
+        <div className="absolute top-[150px] h-[578px] w-full overflow-hidden">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
