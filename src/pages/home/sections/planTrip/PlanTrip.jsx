@@ -41,7 +41,7 @@ const PlanTrip = () => {
     },
     {
       src: shape_2,
-      position: "absolute top-[100px] left-[58px]",
+      position: "absolute top-[120px] left-[58px]",
       size: "w-14 h-[78px]",
     },
     {

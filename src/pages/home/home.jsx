@@ -14,6 +14,7 @@ import BackToTop from "@/components/ui/BackToTop";
 import Background from "./sections/background/Background";
 import PlanTrip from "./sections/planTrip/PlanTrip";
 import RecommendPlace from "./sections/recommendPlace/RecommendPlace";
+import Rate from "./sections/rate/Rate";
 
 const Home = () => {
   return (
@@ -30,12 +31,11 @@ const Home = () => {
       <PlanTrip />
       <RecommendPlace />
       <OverlapGroupWrapperSubsection />
-
+      <Rate />
       <TourGuidesSection />
       <TourGuidesComment />
       <Background />
       <ClientTestimonialsSection />
-
       <FooterSection />
       <BackToTop />
     </>

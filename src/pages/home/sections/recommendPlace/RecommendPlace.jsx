@@ -5,6 +5,7 @@ import imgTour1 from "@/assets/tour_box_1.png";
 import imgTour2 from "@/assets/tour_box_2.png";
 import imgTour3 from "@/assets/tour_box_3.png";
 import imgTour4 from "@/assets/tour_box_4.png";
+import bgRecommend from "@/assets/backgrondRecommend.png";
 
 const RecommendPlace = () => {
   const tripData = [
@@ -58,7 +59,14 @@ const RecommendPlace = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[url(https://c.animaapp.com/met4ud2uDv3jx9/img/background-1.png)] py-[119px]">
+    <section
+      className="relative w-full py-[95px]"
+      style={{
+        backgroundImage: `url(${bgRecommend})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <header className="mb-[98px] text-center">
@@ -94,12 +102,12 @@ const RecommendPlace = () => {
               {/* Trip Details */}
               <div className="p-6">
                 {/* Title */}
-                <h3 className="font-manrope mb-4 text-lg leading-[25.5px] font-medium text-[#0d0d0c]">
+                <h3 className="font-manrope text-lg leading-[25.5px] font-medium text-[#0d0d0c]">
                   {trip.title}
                 </h3>
 
                 {/* Location */}
-                <div className="mb-4 flex items-center gap-2">
+                <div className="flex items-center gap-2">
                   <MapPinIcon className="h-4 w-4 text-[#6e7070]" />
                   <span className="text-base leading-[26px] font-normal text-[#6e7070]">
                     {trip.location}
