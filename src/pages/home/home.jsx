@@ -13,6 +13,7 @@ import HeroSection from "./sections/topDestination/topDestination";
 import BackToTop from "@/components/ui/BackToTop";
 import Background from "./sections/background/Background";
 import PlanTrip from "./sections/planTrip/PlanTrip";
+import RecommendPlace from "./sections/recommendPlace/RecommendPlace";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <HeroSection />
       <PopularDestinationsSection />
       <PlanTrip />
+      <RecommendPlace />
       <OverlapGroupWrapperSubsection />
 
       <TourGuidesSection />

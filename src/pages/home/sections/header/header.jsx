@@ -3,9 +3,9 @@ import { useState } from "react";
 import { MapPin, Clock, ChevronDown, Globe } from "lucide-react";
 import logoBg from "@/assets/MaskGroup.png";
 import logo from "@/assets/logo.svg.png";
-import logoPoint from "@/assets/maskPoint.png";
-import Button from "../../../../components/ui/button";
 
+import Button from "../../../../components/ui/button";
+import { ArrowRight } from "lucide-react";
 function Header() {
   const [language, setLanguage] = useState("Language");
 
@@ -113,7 +113,7 @@ function Header() {
         <div className="flex flex-1 justify-end pr-[72px]">
           <Button className="my-[18px] h-[56px] w-[230px] gap-x-2 bg-[#113D48] hover:bg-teal-700">
             <span>Request A Quote</span>
-            <img src={logoPoint} alt="logoPoint" className="h-6 w-6" />
+            <ArrowRight className="h-6 w-6 text-white" />
           </Button>
         </div>
       </div>

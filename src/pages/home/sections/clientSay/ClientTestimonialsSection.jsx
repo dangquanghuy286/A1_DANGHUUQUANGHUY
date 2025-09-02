@@ -7,6 +7,7 @@ import shape_3 from "@/assets/shape_3.png";
 import blog_1 from "@/assets/blog1.png";
 import blog_2 from "@/assets/blog2.png";
 import blog_3 from "@/assets/blog3.png";
+import { ArrowRight } from "lucide-react";
 const ClientTestimonialsSection = () => {
   const blogPosts = [
     {
@@ -81,10 +82,10 @@ const ClientTestimonialsSection = () => {
       <div className="absolute top-[166px] left-[1402px]">
         <Button
           variant="outline"
-          className="h-14 w-[218px] rounded-[48px] border-[#113d48] text-[#113d48] transition-colors hover:bg-[#113d48]"
+          className="flex h-14 w-[218px] items-center justify-center gap-2 rounded-[48px] border-[#113d48] text-[#113d48] transition-colors hover:bg-[#113d48] hover:text-white"
         >
           <span className="text-base font-normal">See More Articles</span>
-          <img className="ml-2 h-6 w-6" alt="Arrow right" src={rightPoint} />
+          <ArrowRight className="h-6 w-6" />
         </Button>
       </div>
 
@@ -124,14 +125,10 @@ const ClientTestimonialsSection = () => {
                 {/* Read More button */}
                 <Button
                   variant="outline"
-                  className="h-12 w-[158px] rounded-[48px] border-[#113D48] text-[#113D48] transition-colors hover:bg-[#113D48]"
+                  className="flex h-12 w-[158px] items-center justify-center gap-2 rounded-[48px] border-[#113D48] text-[#113D48] transition-colors hover:bg-[#113D48] hover:text-white"
                 >
                   <span className="text-base font-normal">Read More</span>
-                  <img
-                    className="ml-2 h-4 w-4"
-                    alt="Arrow right"
-                    src={post.buttonIcon}
-                  />
+                  <ArrowRight className="h-5 w-5" />
                 </Button>
               </div>
             </div>

@@ -1,10 +1,8 @@
 import React from "react";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowUp, ArrowDown } from "lucide-react";
 import Button from "@/components/ui/button";
 import background from "@/assets/Background.png";
-import logoPoint from "@/assets/maskPoint.png";
-import leftPoint from "@/assets/left-arrow.svg.png";
-import rightPoint from "@/assets/right-arrow.svg.png";
+
 export const MainContentSection = () => {
   const navigationDots = [
     { active: false, className: "bg-white" },
@@ -41,14 +39,14 @@ export const MainContentSection = () => {
           <div className="flex gap-[24px]">
             <Button className="flex h-[64px] items-center justify-center gap-x-2 px-[35px] text-base font-normal">
               <span>Explore Tours</span>
-              <img src={logoPoint} alt="logoPoint" className="h-6 w-6" />
+              <ArrowRight className="h-6 w-6 text-white" />
             </Button>
             <Button
               variant="outline"
               className="flex h-[64px] items-center justify-center gap-x-2 border-white px-[35px] text-base font-normal text-white hover:bg-white hover:text-black"
             >
               <span>Our Services</span>
-              <img src={logoPoint} alt="logoPoint" className="h-6 w-6" />
+              <ArrowRight className="h-6 w-6 text-white" />
             </Button>
           </div>
         </div>
@@ -58,7 +56,7 @@ export const MainContentSection = () => {
       <div className="absolute top-1/2 right-[57px] flex -translate-y-1/2 flex-col items-center gap-4">
         {/* Previous Button */}
         <button className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30">
-          <img src={leftPoint} alt="logoPoint" className="h-6 w-6" />
+          <ArrowUp className="h-6 w-6 text-white" />
         </button>
 
         {/* Navigation Dots */}
@@ -73,7 +71,7 @@ export const MainContentSection = () => {
 
         {/* Next Button */}
         <button className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30">
-          <img src={rightPoint} alt="logoPoint" className="h-6 w-6" />
+          <ArrowDown className="h-6 w-6 text-white" />
         </button>
       </div>
     </section>

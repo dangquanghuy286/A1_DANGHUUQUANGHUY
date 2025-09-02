@@ -4,7 +4,7 @@ import imgAbout1 from "@/assets/about_1_1.png";
 import imgAbout2 from "@/assets/about_1_2.png";
 import imgAbout3 from "@/assets/about_1_3.png";
 import imgBg from "@/assets/about_bg.png";
-import maskPoint from "@/assets/maskPoint.png";
+import { ArrowRight } from "lucide-react";
 import map from "@/assets/map.png";
 import user from "@/assets/user.png";
 import shape_1 from "@/assets/shape_1.png";
@@ -137,7 +137,7 @@ const PlanTrip = () => {
           <span className="mr-3 text-base leading-[26px] font-normal text-white">
             Learn More
           </span>
-          <img className="h-6 w-6" alt="Arrow" src={maskPoint} />
+          <ArrowRight className="h-6 w-6 text-white" />
         </Button>
 
         {/* Background Image - positioned to appear behind content */}

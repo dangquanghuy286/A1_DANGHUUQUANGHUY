@@ -5,7 +5,7 @@ import destination1 from "@/assets/destination_1_2.jpg.png";
 import destination2 from "@/assets/destination_1_3.jpg.png";
 import destination3 from "@/assets/destination_1_4.jpg.png";
 import destination4 from "@/assets/destination_1_5.jpg.png";
-import imgmaskPoint from "@/assets/maskPoint.png";
+import { ArrowRight } from "lucide-react";
 const PopularDestinationsSection = () => {
   const destinations = [
     {
@@ -128,16 +128,12 @@ const PopularDestinationsSection = () => {
                       </p>
                       <Button
                         variant="outline"
-                        className="absolute top-0 right-[44px] h-[51px] w-[154px] rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
+                        className="absolute top-0 right-[44px] flex h-[51px] w-[154px] items-center justify-center gap-2 rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
                       >
-                        <span className="text-center text-base leading-[26px] font-normal tracking-[0] text-white">
+                        <span className="text-base leading-[26px] font-normal text-white">
                           View All
                         </span>
-                        <img
-                          className="ml-2 h-4 w-4"
-                          alt="Arrow"
-                          src={imgmaskPoint}
-                        />
+                        <ArrowRight className="h-6 w-6 text-white" />
                       </Button>
                     </div>
                   )}
@@ -154,16 +150,12 @@ const PopularDestinationsSection = () => {
                       </p>
                       <Button
                         variant="outline"
-                        className="absolute top-0 right-[44px] h-[43px] w-[130px] rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
+                        className="absolute top-0 right-[44px] flex h-[43px] w-[130px] items-center justify-center gap-2 rounded-[48px] border-white bg-transparent transition-colors hover:bg-white/10"
                       >
-                        <span className="text-center text-base leading-[26px] tracking-[0] text-white">
+                        <span className="text-base leading-[26px] tracking-[0] text-white">
                           View All
                         </span>
-                        <img
-                          className="ml-2 h-[13px] w-[13px]"
-                          alt="Arrow"
-                          src={imgmaskPoint}
-                        />
+                        <ArrowRight className="h-5 w-5 text-white" />
                       </Button>
                     </div>
                   )}
@@ -185,11 +177,7 @@ const PopularDestinationsSection = () => {
                         <span className="text-center text-base leading-[26px] font-normal tracking-[0] text-white">
                           View All
                         </span>
-                        <img
-                          className="ml-2 h-3 w-3"
-                          alt="Arrow"
-                          src={imgmaskPoint}
-                        />
+                        <ArrowRight className="h-4 w-4 text-white" />
                       </Button>
                     </div>
                   )}
