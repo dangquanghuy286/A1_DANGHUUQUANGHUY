@@ -49,7 +49,7 @@ const Rate = () => {
     },
     {
       src: shape_4,
-      position: "absolute  left-[1772px]",
+      position: "absolute top-0 left-[1772px]",
       size: "w-[52px] h-[60px]",
     },
     {

@@ -6,6 +6,7 @@ import client1 from "@/assets/client1.png";
 import client2 from "@/assets/client2.png";
 import client3 from "@/assets/client3.png";
 import iconRate from "@/assets/icon.png";
+import Dots from "@/components/ui/Dots";
 
 const TourGuidesComment = () => {
   const testimonials = [
@@ -18,7 +19,7 @@ const TourGuidesComment = () => {
       testimonial:
         "Solar panels adorn the roof, harnessing renewable energy to power the home and even feed excess electricity back into the grid. High-performance insulation and triple-glazed",
       cardClass: "w-[616px] h-[335px]",
-      position: "top-[133px] left-[22px]",
+      position: "top-[133px] left-0]",
     },
     {
       id: 2,
@@ -42,15 +43,6 @@ const TourGuidesComment = () => {
       cardClass: "w-[616px] h-[335px]",
       position: "top-[133px] left-[1422px]",
     },
-  ];
-
-  const paginationDots = [
-    { active: true, position: "left-[867px]" },
-    { active: false, position: "left-[913px]" },
-    { active: false, position: "left-[959px]" },
-    { active: false, position: "left-[1005px]" },
-    { active: false, position: "left-[1051px]" },
-    { active: false, position: "left-[1097px]" },
   ];
 
   return (
@@ -125,23 +117,15 @@ const TourGuidesComment = () => {
             </div>
           ))}
 
-          <nav
-            className="absolute top-[543px] left-1/2 flex -translate-x-1/2 transform gap-[23px]"
-            aria-label="Testimonial pagination"
-          >
-            {paginationDots.map((dot, index) => (
-              <button
-                key={index}
-                className={`h-4 w-4 rounded-lg border border-solid transition-colors ${
-                  dot.active
-                    ? "border-[#1ca8cb] bg-[#1ca8cb]"
-                    : "border-[#113d48] bg-transparent hover:bg-[#113d48]/10"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-                aria-current={dot.active ? "true" : "false"}
-              />
-            ))}
-          </nav>
+          <Dots
+            paginationDots={[
+              { active: true },
+              { active: false },
+              { active: false },
+            ]}
+            positionClass="top-[543px]"
+            ariaLabelPrefix="Testimonial"
+          />
         </div>
       </div>
     </section>

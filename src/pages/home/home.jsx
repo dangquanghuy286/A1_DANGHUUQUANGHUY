@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "./sections/header/header";
-import { MainContentSection } from "./sections/maincontentsection/maincontentsection";
+import MainContentSection from "./sections/maincontentsection/maincontentsection";
 import SearchFilter from "./sections/maincontentsection/searchFilter";
 
 import PopularDestinationsSection from "./sections/popularDestination/PopularDestination";
 import OverlapGroupWrapperSubsection from "./sections/overlapGroupWrapperSubsection/OverlapGroupWrapperSubsection";
 import TourGuidesSection from "./sections/tourGuide/tourGuide";
 import ClientTestimonialsSection from "./sections/clientSay/ClientTestimonialsSection";
-import TourGuidesComment from "./sections/clientSay/clientComment";
+
 import FooterSection from "./sections/footer/FooterSection";
 import HeroSection from "./sections/topDestination/topDestination";
 import BackToTop from "@/components/ui/BackToTop";
@@ -15,6 +15,7 @@ import Background from "./sections/background/Background";
 import PlanTrip from "./sections/planTrip/PlanTrip";
 import RecommendPlace from "./sections/recommendPlace/RecommendPlace";
 import Rate from "./sections/rate/Rate";
+import TourGuidesComment from "./sections/clientSay/ClientComment";
 
 const Home = () => {
   return (

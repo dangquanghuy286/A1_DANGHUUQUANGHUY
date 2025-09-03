@@ -1,23 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { ArrowRight, ArrowUp, ArrowDown } from "lucide-react";
 import Button from "@/components/ui/button";
-import background from "@/assets/Background.png";
+import background1 from "@/assets/Background.png";
+import background2 from "@/assets/Container2.png";
 
-export const MainContentSection = () => {
-  const navigationDots = [
-    { active: false, className: "bg-white" },
-    { active: true, className: "bg-[#1ca8cb]" },
-    { active: false, className: "bg-white" },
-  ];
+const MainContentSection = () => {
+  const backgrounds = [background1, background2];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const navigationDots = backgrounds.map((_, index) => ({
+    active: index === currentIndex,
+    className: index === currentIndex ? "bg-[#1ca8cb]" : "bg-white",
+  }));
+
+  // Handler for Next button
+  const handleNext = () => {
+    console.log(
+      "Next button clicked, new index:",
+      (currentIndex + 1) % backgrounds.length,
+    );
+    setCurrentIndex((prev) => (prev + 1) % backgrounds.length);
+  };
+
+  // Handler for Previous button
+  const handlePrev = () => {
+    console.log(
+      "Previous button clicked, new index:",
+      (currentIndex - 1 + backgrounds.length) % backgrounds.length,
+    );
+    setCurrentIndex(
+      (prev) => (prev - 1 + backgrounds.length) % backgrounds.length,
+    );
+  };
 
   return (
     <section className="relative h-[805px] w-full overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 h-full w-full">
+      <div className="absolute inset-0 h-full w-full transition-all duration-500">
         <div
           className="h-full w-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${background})`,
+            backgroundImage: `url(${backgrounds[currentIndex]})`,
           }}
         ></div>
       </div>
@@ -43,7 +66,7 @@ export const MainContentSection = () => {
             </Button>
             <Button
               variant="outline"
-              className="flex h-[64px] items-center justify-center gap-x-2 border-white px-[35px] text-base font-normal text-white hover:bg-white hover:text-black"
+              className="flex h-[64px] items-center justify-center gap-x-2 border-white px-[35px] text-base font-normal text-white hover:bg-white/10 hover:text-black"
             >
               <span>Our Services</span>
               <ArrowRight className="h-6 w-6 text-white" />
@@ -55,7 +78,10 @@ export const MainContentSection = () => {
       {/* Navigation Controls */}
       <div className="absolute top-1/2 right-[57px] flex -translate-y-1/2 flex-col items-center gap-4">
         {/* Previous Button */}
-        <button className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30">
+        <button
+          onClick={handlePrev}
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30"
+        >
           <ArrowUp className="h-6 w-6 text-white" />
         </button>
 
@@ -70,10 +96,15 @@ export const MainContentSection = () => {
         </div>
 
         {/* Next Button */}
-        <button className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30">
+        <button
+          onClick={handleNext}
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30"
+        >
           <ArrowDown className="h-6 w-6 text-white" />
         </button>
       </div>
     </section>
   );
 };
+
+export default MainContentSection;

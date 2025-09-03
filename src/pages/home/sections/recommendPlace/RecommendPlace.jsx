@@ -6,6 +6,7 @@ import imgTour2 from "@/assets/tour_box_2.png";
 import imgTour3 from "@/assets/tour_box_3.png";
 import imgTour4 from "@/assets/tour_box_4.png";
 import bgRecommend from "@/assets/backgrondRecommend.png";
+import Dots from "../../../../components/ui/Dots";
 
 const RecommendPlace = () => {
   const tripData = [
@@ -48,8 +49,8 @@ const RecommendPlace = () => {
   ];
 
   const paginationDots = [
-    { active: false },
     { active: true },
+    { active: false },
     { active: false },
     { active: false },
     { active: false },
@@ -69,7 +70,7 @@ const RecommendPlace = () => {
     >
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <header className="mb-[98px] text-center">
+        <header className="mb-[40.5px] text-center">
           <div className="font-montez text-[40px] leading-10 font-normal text-[#113d48]">
             Best Recommended Places
           </div>
@@ -147,19 +148,11 @@ const RecommendPlace = () => {
         </div>
 
         {/* Pagination Dots */}
-        <div className="flex justify-center gap-[23px]">
-          {paginationDots.map((dot, index) => (
-            <button
-              key={index}
-              className={`h-4 w-4 rounded-lg border border-solid transition-colors hover:bg-[#1ca8cb] ${
-                dot.active
-                  ? "border-[#1ca8cb] bg-[#1ca8cb]"
-                  : "border-[#113d48] hover:border-[#1ca8cb]"
-              }`}
-              aria-label={`Go to page ${index + 1}`}
-            />
-          ))}
-        </div>
+        <Dots
+          paginationDots={paginationDots}
+          positionClass=""
+          ariaLabelPrefix="page"
+        />
       </div>
     </section>
   );

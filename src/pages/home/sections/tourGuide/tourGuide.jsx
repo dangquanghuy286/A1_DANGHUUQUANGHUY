@@ -4,6 +4,7 @@ import teamMember1 from "@/assets/team_1_2.jpg.png";
 import teamMember2 from "@/assets/team_1_3.jpg.png";
 import teamMember3 from "@/assets/team_1_4.jpg.png";
 import teamMember4 from "@/assets/team_1_1.jpg.png";
+import Dots from "@/components/ui/Dots";
 const TourGuidesSection = () => {
   const tourGuides = [
     {
@@ -107,20 +108,12 @@ const TourGuidesSection = () => {
               ))}
             </div>
 
-            {/* Navigation Dots */}
-            <div className="flex justify-center gap-[30px]">
-              {navigationDots.map((dot, index) => (
-                <button
-                  key={index}
-                  className={`h-3 w-3 rounded-full border transition-colors ${
-                    dot.active
-                      ? "border-[#1ca8cb] bg-[#1ca8cb]"
-                      : "border-[#113d48] bg-transparent hover:bg-[#113d48]/10"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
+            <Dots
+              paginationDots={navigationDots}
+              containerClass="justify-center gap-[30px]"
+              ariaLabelPrefix="slide"
+              dotClass="h-3 w-3 rounded-full"
+            />
           </div>
         </div>
       </div>

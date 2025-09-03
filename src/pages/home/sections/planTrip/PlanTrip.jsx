@@ -140,7 +140,7 @@ const PlanTrip = () => {
           <ArrowRight className="h-6 w-6 text-white" />
         </Button>
 
-        {/* Background Image - positioned to appear behind content */}
+        {/* Background Image */}
         <div className="absolute top-3/4 right-0 -z-10 -translate-y-1/2 transform">
           <div className="relative">
             <div className="h-[396px] w-[396px] rounded-[198px] bg-[#e9f6f9]" />

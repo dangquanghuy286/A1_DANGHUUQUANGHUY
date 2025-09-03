@@ -7,6 +7,7 @@ import imgCategories1 from "@/assets/categories1.png";
 import imgCategories2 from "@/assets/categories2.png";
 import imgCategories3 from "@/assets/categories3.png";
 import imgCategories4 from "@/assets/categories4.png";
+import Dots from "@/components/ui/Dots";
 
 export const HeroSection = () => {
   const tourCategories = [
@@ -93,20 +94,11 @@ export const HeroSection = () => {
               </div>
             </div>
           ))}
-          {/* Pagination Dots */}
-          <div className="absolute top-[428px] left-[762px] h-5 w-[250px]">
-            {paginationDots.map((dot, index) => (
-              <button
-                key={index}
-                className={`absolute top-0 h-4 w-4 ${dot.leftPosition} rounded-lg border border-solid transition-colors hover:bg-[#1ca8cb] ${
-                  dot.active
-                    ? "border-[#1ca8cb] bg-[#1ca8cb]"
-                    : "border-[#113d48] bg-transparent"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+          <Dots
+            paginationDots={paginationDots}
+            positionClass="absolute top-[428px] left-[925px] h-5 w-[250px]"
+            ariaLabelPrefix="slide"
+          />
         </div>
       </div>
     </section>
